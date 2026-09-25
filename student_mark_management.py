@@ -150,19 +150,7 @@ def show_marks_for_course(students, courses, marks):
         mark = course_marks.get(s["id"], "N/A")
         print(f"{s['id']:<10}{s['name']:<25}{mark}")
 
-MENU = """
-=========================================
-   STUDENT MARK MANAGEMENT
-=========================================
-1. Input number of students & students
-2. Input number of courses & courses
-3. Select a course & input marks
-4. List courses
-5. List students
-6. Show student marks for a course
-0. Exit
-=========================================
-"""
+MENU =
 
 
 def main():
