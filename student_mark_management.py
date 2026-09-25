@@ -16,18 +16,6 @@ A simple console program built with functions and collections
     - list students
     - show student marks for a given course
 """
-
-# ---------------------------------------------------------------------------
-# Data model
-# ---------------------------------------------------------------------------
-# students : list of dicts -> {"id": str, "name": str, "dob": str}
-# courses  : list of dicts -> {"id": str, "name": str}
-# marks    : dict -> {course_id: {student_id: mark}}
-
-
-# ---------------------------------------------------------------------------
-# Input functions
-# ---------------------------------------------------------------------------
 def input_number_of_students():
     """Input the number of students in a class."""
     while True:
@@ -120,10 +108,6 @@ def input_marks_for_course(students, courses, marks):
             except ValueError:
                 print("  Invalid mark, please enter a number.")
 
-
-# ---------------------------------------------------------------------------
-# Listing functions
-# ---------------------------------------------------------------------------
 def list_courses(courses):
     """Print all courses."""
     print("\n=== Course list ===")
@@ -166,10 +150,6 @@ def show_marks_for_course(students, courses, marks):
         mark = course_marks.get(s["id"], "N/A")
         print(f"{s['id']:<10}{s['name']:<25}{mark}")
 
-
-# ---------------------------------------------------------------------------
-# Menu / main program
-# ---------------------------------------------------------------------------
 MENU = """
 =========================================
    STUDENT MARK MANAGEMENT
